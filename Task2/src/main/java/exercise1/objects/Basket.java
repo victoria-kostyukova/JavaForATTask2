@@ -5,15 +5,11 @@ package exercise1.objects;
  */
 public class Basket {
 
-    private static Basket basket;
     private static double ballWeight = 0;
     private static int blueBallCount = 0;
 
-    public Basket getBasket() {
-        if (basket == null){
-            basket = new Basket();
-        }
-        return basket;
+
+    public Basket() {
     }
 
     public static double getBallWeight() {
@@ -25,8 +21,8 @@ public class Basket {
     }
 
     public static void throwBall(Ball ball){
-        ballWeight = ball.getWeight();
-        if (ball.getColour() == "blue"){
+        ballWeight = ballWeight + ball.getWeight();
+        if (ball.getColour().equals("blue")){
             blueBallCount = blueBallCount + 1;
         }
     }

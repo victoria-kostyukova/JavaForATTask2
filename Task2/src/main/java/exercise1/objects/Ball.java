@@ -7,7 +7,7 @@ public class Ball {
     private double weight = 0;
     private String colour = "colour";
 
-    public Ball(double weight, String colour) {
+    public Ball(String colour, double weight) {
         this.weight = weight;
         this.colour = colour;
     }
